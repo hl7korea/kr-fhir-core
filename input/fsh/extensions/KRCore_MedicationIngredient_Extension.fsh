@@ -8,7 +8,7 @@ Description: """KR Core Medication Ingredient Extension은 KR Core Server와 KR 
 동일한 리소스 인스턴스 내에서 **반드시(SHALL)** 약품 성분명을 함께 표현해야 하며, 이를 위해 **반드시(SHALL)** 본 Extension을 사용해야 한다.
 + KR Core MedicationRequest Profile을 적용한 리소스 인스턴스가 `MedicationRequest.medicationReference`를 사용하여 약품 제품명과 약품 성분명 정보를 간접적으로 제공한 경우에는, 
 **가능한 한(SHOULD)** 본 Extension을 사용하지 않는다."""
-Context: MedicationRequest.medication.ofType(CodeableConcept)
+* ^context.expression = "MedicationRequest.medication.ofType(CodeableConcept)"
 * ^extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension.valueCode = #trial-use
 * ^extension.valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
